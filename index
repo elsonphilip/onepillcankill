@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>One Pill Can Kill | Fentanyl Awareness</title>
+<style>
+:root{--bg:#f4f1ea;--ink:#141414;--card:#fff;--mut:#555;--red:#d62828;--rt:#fff;--line:#d9d4c7;--hero:#111;--ht:#f4f1ea;--ok:#1b7a3d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121212;--ink:#f1eee6;--card:#1d1d1d;--mut:#aaa;--red:#ff4d4d;--rt:#111;--line:#333;--hero:#000;--ht:#f1eee6;--ok:#5fd68a}}
+:root[data-theme="dark"]{--bg:#121212;--ink:#f1eee6;--card:#1d1d1d;--mut:#aaa;--red:#ff4d4d;--rt:#111;--line:#333;--hero:#000;--ht:#f1eee6;--ok:#5fd68a}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",Arial,sans-serif;line-height:1.5}
+nav{position:sticky;top:0;z-index:20;background:var(--hero);color:var(--ht);display:flex;gap:4px;overflow-x:auto;padding:10px 12px;padding-top:calc(10px + env(safe-area-inset-top,0px));align-items:center}
+nav b{color:var(--red);margin-right:8px;white-space:nowrap}
+nav a{color:var(--ht);text-decoration:none;font-size:14px;padding:6px 10px;white-space:nowrap;border-radius:4px}
+nav a:hover{background:var(--red);color:var(--rt)}
+section{padding:56px 18px}
+.in{max-width:760px;margin:0 auto}
+.hero{background:var(--hero);color:var(--ht);text-align:center;border-bottom:8px solid var(--red);padding:72px 18px 56px}
+.tag{display:inline-block;background:var(--red);color:var(--rt);font-weight:800;letter-spacing:.12em;font-size:12px;padding:4px 10px;text-transform:uppercase}
+h1{font-size:clamp(44px,12vw,92px);line-height:.92;margin:18px 0 12px;text-transform:uppercase;font-weight:900;letter-spacing:-.02em}
+h1 span{color:var(--red)}
+.lead{font-size:19px;max-width:560px;margin:0 auto 24px}
+.btn{display:inline-block;background:var(--red);color:var(--rt);font-weight:800;text-decoration:none;padding:14px 24px;border:0;font-size:16px;cursor:pointer;text-transform:uppercase}
+h2{font-size:28px;text-transform:uppercase;margin:0 0 6px;border-left:8px solid var(--red);padding-left:12px}
+.kick{color:var(--mut);margin:0 0 22px;padding-left:20px}
+.grid{display:grid;gap:12px}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:1fr 1fr}
+.stat,.box{background:var(--card);border:2px solid var(--line);padding:18px}
+.stat .n{font-size:54px;font-weight:900;color:var(--red);line-height:1}
+.stat p{margin:8px 0 0}.stat small{display:block;color:var(--mut);margin-top:6px}
+.alt{background:var(--card);border-top:2px solid var(--line);border-bottom:2px solid var(--line)}
+.alt .box,.alt .stat{background:var(--bg)}
+.pills{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pillbtn{background:var(--card);border:3px solid var(--line);padding:18px;text-align:center;cursor:pointer;font:inherit;color:inherit}
+.pillbtn:focus-visible{outline:3px solid var(--red)}
+.dot{width:90px;height:90px;border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:22px;border:3px solid var(--ink);background:#7aa6d6;color:#111}
+.res{margin-top:14px;padding:16px;border:2px solid var(--red);background:var(--card);display:none;font-weight:600}
+.res.show{display:block}
+.q h3{margin:0 0 12px;font-size:20px}
+.opt{display:block;width:100%;text-align:left;background:var(--card);color:var(--ink);border:2px solid var(--line);padding:12px 14px;margin-bottom:8px;font:inherit;cursor:pointer}
+.opt:hover:not(:disabled){border-color:var(--red)}
+.opt.right{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 15%,var(--card))}
+.opt.wrong{border-color:var(--red);background:color-mix(in srgb,var(--red) 15%,var(--card))}
+.fb{min-height:24px;font-weight:600;margin:8px 0 14px}
+.bar{height:8px;background:var(--line);margin-bottom:16px}.bar i{display:block;height:100%;background:var(--red);width:0;transition:width .3s}
+.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:10px}
+.steps li{counter-increment:s;background:var(--card);border:2px solid var(--line);padding:12px 14px 12px 58px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:10px;width:34px;height:34px;border-radius:50%;background:var(--red);color:var(--rt);font-weight:900;display:flex;align-items:center;justify-content:center}
+.alert{background:var(--red);color:var(--rt);padding:18px;font-weight:700;margin-top:14px}
+footer{background:var(--hero);color:var(--ht);padding:36px 18px;border-top:8px solid var(--red);font-size:13px;overflow-wrap:anywhere}
+footer a{color:var(--ht)}footer h3{text-transform:uppercase;margin:0 0 8px}
+@media(max-width:600px){.g3,.g2{grid-template-columns:1fr}section{padding:40px 16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}}
+</style></head><body>
+<nav><b>ONE PILL</b><a href="#facts">The Facts</a><a href="#spot">Spot It</a><a href="#quiz">Test Yourself</a><a href="#help">Stay Safe</a><a href="#sources">Sources</a></nav>
+
+<header class="hero"><div class="in">
+<span class="tag">Public Service Announcement</span>
+<h1>One pill<br><span>can kill.</span></h1>
+<p class="lead">That “Xanax,” “Percocet,” or “Adderall” from a friend or an app might be fentanyl. You can’t see it, smell it, or taste it.</p>
+<a class="btn" href="#facts">See the facts</a>
+</div></header>
+
+<section id="facts"><div class="in">
+<h2>The facts</h2><p class="kick">Teens are the ones getting hurt, and most never meant to use fentanyl.</p>
+<div class="grid g3" id="stats">
+<div class="stat"><div class="n"><span data-to="182">0</span>%</div><p>rise in fentanyl-involved overdose deaths, ages 10–19, 2019 to 2021</p><small>CDC MMWR [1]</small></div>
+<div class="stat"><div class="n">1 in 4</div><p>teen overdose deaths showed evidence of counterfeit pills (24.5%)</p><small>CDC MMWR [1]</small></div>
+<div class="stat"><div class="n">2 in 3</div><p>teen overdose deaths happened with someone nearby who could have helped</p><small>CDC researcher via NPR [2]</small></div>
+</div>
+<div class="alert">Fentanyl slows and can stop your breathing. Pill-to-pill doses vary, so one can be fine and the next fatal.</div>
+</div></section>
+
+<section class="alt" id="spot"><div class="in">
+<h2>Spot the fake</h2><p class="kick">Tap the pill you think is dangerous.</p>
+<div class="pills">
+<button class="pillbtn" data-r="Pharmacy pill. Made, tested, and dosed. Safe only if it was prescribed to you."><div class="dot">M30</div><b>Pill A</b></button>
+<button class="pillbtn" data-r="Fake pill. Looks identical, but the dose is a guess."><div class="dot">M30</div><b>Pill B</b></button>
+</div>
+<div class="res" id="pillres" role="status"></div>
+<p style="margin-top:14px"><b>Trick question:</b> you can’t tell by looking. Neither can a dealer, a friend, or an app. Only a pharmacy pill prescribed to you is known to be safe.</p>
+</div></section>
+
+<section id="danger"><div class="in">
+<h2>Where it hides</h2><p class="kick">Three ways teens end up with fentanyl by accident.</p>
+<div class="grid g3">
+<div class="box"><b>Social media deals</b><p>Dealers sell fake pills through apps teens use. The CDC says social media makes them easy to buy [1].</p></div>
+<div class="box"><b>“Just one to focus or sleep”</b><p>Most teens who take a fake pill thought it was a normal prescription.</p></div>
+<div class="box"><b>Mixing</b><p>Fentanyl plus alcohol or other depressants raises overdose risk.</p></div>
+</div></div></section>
+
+<section class="alt" id="quiz"><div class="in">
+<h2>What would you do?</h2><p class="kick">Three quick scenarios.</p>
+<div class="bar"><i id="bar"></i></div>
+<div class="q" id="q"></div>
+</div></section>
+
+<section id="help"><div class="in">
+<h2>How to stay safe</h2><p class="kick">Five things that can save a life.</p>
+<ol class="steps">
+<li><b>Only take medicine prescribed to you</b> and filled at a pharmacy.</li>
+<li><b>Never buy pills online or from a friend.</b> “It’s legit” is not proof.</li>
+<li><b>Carry naloxone (Narcan).</b> It reverses opioid overdoses and is sold over the counter.</li>
+<li><b>Know the signs:</b> won’t wake up, slow or no breathing, blue or gray lips, pinpoint pupils.</li>
+<li><b>Act fast:</b> call 911, give naloxone, stay with the person.</li>
+</ol>
+<div class="alert">Need help or someone to talk to? Call or text <b>988</b>, or call SAMHSA’s free, confidential 24/7 helpline at <b>1-800-662-HELP (4357)</b>.</div>
+</div></section>
+
+<footer id="sources"><div class="in"><h3>Sources</h3>
+[1] CDC, MMWR, “Drug Overdose Deaths Among Adolescents Aged 10–19 Years, July 2019–December 2021” (Dec. 2022): <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9762908">pmc.ncbi.nlm.nih.gov/articles/PMC9762908</a><br>
+[2] NPR/KUNC, “As more teens overdose on fentanyl, schools face a drug crisis unlike any other” (Aug. 30, 2023): <a href="https://www.kunc.org/npr-news/2023-08-30/as-more-teens-overdose-on-fentanyl-schools-face-a-drug-crisis-unlike-any-other">kunc.org</a><br>
+[3] CNBC/NBC San Diego, “Drug overdose deaths among teenagers surged during the pandemic”: <a href="https://www.nbcsandiego.com/news/business/money-report/drug-overdose-deaths-among-teenagers-surged-during-the-pandemic-driven-by-illicit-fentanyl/3124702/">nbcsandiego.com</a>
+</div></footer>
+
+<script>
+(function(){
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+var c=document.querySelector("[data-to]");
+function count(){var t=+c.dataset.to,s=null;function f(ts){if(!s)s=ts;var p=Math.min((ts-s)/1200,1);c.textContent=Math.round(t*p);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+if(reduce||!("IntersectionObserver" in window)){c.textContent=c.dataset.to}else{var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){count();io.disconnect()}},{threshold:.5});io.observe(document.getElementById("stats"))}
+var r=document.getElementById("pillres");
+document.querySelectorAll(".pillbtn").forEach(function(b){b.addEventListener("click",function(){r.textContent="Both look the same. "+b.dataset.r+" Pill A is the pharmacy pill and Pill B is the fake, but you couldn’t tell by looking.";r.classList.add("show")})});
+var Q=[
+{q:"A friend offers you a “Percocet” for a rough night. It’s not from a pharmacy. What do you do?",o:["Take half to be safe","Say no. Any pill not prescribed to you could be fentanyl","Ask if they’re sure it’s real"],a:1,f:"Right. Cutting a pill doesn’t help because fentanyl isn’t spread evenly through fake pills."},
+{q:"Someone at a party won’t wake up and their breathing is slow. First move?",o:["Let them sleep it off","Call 911, give naloxone if you have it, stay with them","Put them in a cold shower"],a:1,f:"Right. Call 911 right away. Waiting can cost them their life."},
+{q:"You see someone selling “Adderall” on social media for cheap. Best choice?",o:["Buy one to try it","Skip it and report the account","Ask for a sample"],a:1,f:"Right. Pills sold on apps are often counterfeit, which is how many teens get hurt [1]."}];
+var i=0,score=0,box=document.getElementById("q"),bar=document.getElementById("bar");
+function show(){bar.style.width=(i/Q.length*100)+"%";
+if(i>=Q.length){bar.style.width="100%";box.innerHTML="<h3>You got "+score+" of "+Q.length+".</h3><p>Share this page with a friend. Knowing the answers can save a life.</p>";var b=document.createElement("button");b.className="btn";b.textContent="Try again";b.onclick=function(){i=0;score=0;show()};box.appendChild(b);return}
+var q=Q[i];box.innerHTML="";var h=document.createElement("h3");h.textContent=q.q;box.appendChild(h);
+var fb=document.createElement("div");fb.className="fb";fb.setAttribute("role","status");
+q.o.forEach(function(t,k){var b=document.createElement("button");b.className="opt";b.textContent=t;b.onclick=function(){
+box.querySelectorAll(".opt").forEach(function(x){x.disabled=true});
+if(k===q.a){score++;b.classList.add("right");fb.textContent=q.f}else{b.classList.add("wrong");box.querySelectorAll(".opt")[q.a].classList.add("right");fb.textContent="Not quite. "+q.f.replace("Right. ","")}
+var n=document.createElement("button");n.className="btn";n.textContent=i===Q.length-1?"See score":"Next";n.onclick=function(){i++;show()};box.appendChild(n)};box.appendChild(b)});
+box.insertBefore(fb,null)}
+show();
+})();
+</script>
+</body></html>
